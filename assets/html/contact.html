@@ -1,9 +1,100 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contato</title>
+    <meta
+      name="description"
+      content="Portfólio de Gabriel pereira, desenvolvedor backend especializado em Node.js, APIs REST e banco de dados (SQL, NoSQL)"
+    />
+    <title>Meu Portfólio - Contato</title>
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- global styles -->
+    <link rel="stylesheet" href="../css/styles.css" />
+
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- tailwindcss -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
-  <body></body>
+  <body
+    class="h-screen bg-[linear-gradient(to_bottom,_black,_rgba(0,0,0,0.5),_black),url('../img/bg-1.jpg')] bg-cover bg-center"
+  >
+    <header class="px-3 h-25 flex justify-between items-center">
+      <div>
+        <a href="/">
+          <img src="../img/logo.png" alt="Logo" />
+        </a>
+      </div>
+
+      <nav class="h-full w-xl flex">
+        <a
+          href="/"
+          class="h-full grow flex justify-center items-center text-lg uppercase font-medium duration-500 border-b-5 text-white border-transparent hover:border-cyan-400 hover:text-cyan-400"
+          >Home</a
+        >
+
+        <a
+          href="/assets/html/about.html"
+          class="h-full grow flex justify-center items-center text-lg uppercase font-medium duration-500 border-b-5 text-white border-transparent hover:border-cyan-400 hover:text-cyan-400"
+          >Sobre mim</a
+        >
+        <a
+          href="/assets/html/stacks.html"
+          class="h-full grow flex justify-center items-center text-lg uppercase font-medium duration-500 border-b-5 text-white border-transparent hover:border-cyan-400 hover:text-cyan-400"
+          >Minhas stacks</a
+        >
+        <a
+          href="/assets/html/projects.html"
+          class="h-full grow flex justify-center items-center text-lg uppercase font-medium duration-500 border-b-5 text-white border-transparent hover:border-cyan-400 hover:text-cyan-400"
+          >Projetos</a
+        >
+        <a
+          href="/assets/html/contact.html"
+          class="h-full grow flex justify-center items-center text-lg uppercase font-medium duration-500 border-b-5 text-white border-transparent hover:border-cyan-400 hover:text-cyan-400"
+          >Contato</a
+        >
+      </nav>
+    </header>
+
+    <section class="my-5 px-3"></section>
+
+    <footer class="h-20 flex items-center ms-3">
+      <div class="h-full flex gap-3 self-start items-center">
+        <a
+          href="https://github.com/gabriel8programmer"
+          target="_blank"
+          class="text-3xl duration-500 hover:text-cyan-400"
+        >
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/gabrielwebprogrammer"
+          target="_blank"
+          class="text-3xl duration-500 hover:text-cyan-400"
+        >
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+      </div>
+
+      <p class="text-base text-center grow">
+        &copy; 2025 Gabriel Pereira. Todos os direitos reservados.
+      </p>
+    </footer>
+  </body>
 </html>
