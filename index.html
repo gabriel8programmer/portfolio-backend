@@ -3,9 +3,118 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfólio de Gabriel pereira, desenvolvedor backend especializado em Node.js, APIs REST e banco de dados (SQL, NoSQL)"
+    />
+    <title>Meu Portfólio</title>
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- global styles -->
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- tailwindcss -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
-  <body>
-    <h1 class="text-3xl font-bold underline">Hello world!</h1>
+  <body
+    class="h-screen bg-[linear-gradient(to_bottom,_black,_rgba(0,0,0,0.5),_black),url('./assets/img/bg-1.jpg')] bg-cover bg-center"
+  >
+    <header class="px-3 h-25 flex justify-between items-center">
+      <div>
+        <a href="/">
+          <img src="./assets/img/logo.png" alt="Logo" />
+        </a>
+      </div>
+
+      <nav class="h-full w-xl flex">
+        <a
+          href="/"
+          class="h-full grow flex justify-center items-center text-lg uppercase font-medium duration-500 border-b-5 text-white border-transparent hover:border-cyan-400 hover:text-cyan-400"
+          >Home</a
+        >
+
+        <a
+          href="./assets/html/about.html"
+          class="h-full grow flex justify-center items-center text-lg uppercase font-medium duration-500 border-b-5 text-white border-transparent hover:border-cyan-400 hover:text-cyan-400"
+          >Sobre mim</a
+        >
+        <a
+          href="./assets/html/stacks.html"
+          class="h-full grow flex justify-center items-center text-lg uppercase font-medium duration-500 border-b-5 text-white border-transparent hover:border-cyan-400 hover:text-cyan-400"
+          >Minhas stacks</a
+        >
+        <a
+          href="./assets/html/projects.html"
+          class="h-full grow flex justify-center items-center text-lg uppercase font-medium duration-500 border-b-5 text-white border-transparent hover:border-cyan-400 hover:text-cyan-400"
+          >Projetos</a
+        >
+        <a
+          href="./assets/html/contact.html"
+          class="h-full grow flex justify-center items-center text-lg uppercase font-medium duration-500 border-b-5 text-white border-transparent hover:border-cyan-400 hover:text-cyan-400"
+          >Contato</a
+        >
+      </nav>
+    </header>
+
+    <section class="my-5 px-3 flex justify-between items-center">
+      <article class="w-150">
+        <h1 class="w-100 text-5xl/15 mb-5 font-(family-name: Montserrat, sans-serif) text-cyan-400">
+          Olá, meu nome é Gabriel Pereira
+        </h1>
+        <p class="pb-3 w-100 text-justify mb-10 border-b-5 border-cyan-400">
+          Este é o meu portfólio, onde apresento minhas experiências de desenvolvedor backend. Nele,
+          você encontrará minhas habilidades, projetos, currículo, informações pessoais e contato.
+        </p>
+
+        <a
+          href="/assets/html/projects.html"
+          class="bg-blue-500 text-center text-light flex justify-center items-center w-50 h-10 rounded-xl duration-500 hover:bg-blue-400"
+          >Ver Projetos</a
+        >
+      </article>
+
+      <figure>
+        <img src="./assets/img/programmer-anim.png" alt="Mundo da Programação" />
+      </figure>
+    </section>
+
+    <footer class="h-20 flex items-center ms-3">
+      <div class="h-full flex gap-3 self-start items-center">
+        <a
+          href="https://github.com/gabriel8programmer"
+          target="_blank"
+          class="text-3xl duration-500 hover:text-cyan-400"
+        >
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/gabrielwebprogrammer"
+          target="_blank"
+          class="text-3xl duration-500 hover:text-cyan-400"
+        >
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+      </div>
+
+      <p class="text-base text-center grow">
+        &copy; 2025 Gabriel Pereira. Todos os direitos reservados.
+      </p>
+    </footer>
   </body>
 </html>
