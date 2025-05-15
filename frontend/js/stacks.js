@@ -19,7 +19,7 @@ const disableAll = () => {
 }
 
 const updateBackground = (i) => {
-    body.setAttribute("class", "h-screen bg-cover bg-center flex flex-col")
+    body.setAttribute("class", "min-h-screen flex flex-col bg-cover bg-center")
 
     body.classList.add(`bg-[linear-gradient(to_bottom,_black,_rgba(0,0,0,0.5),_black),url('../img/bg-${i + 2}.jpg')]`)
 }
