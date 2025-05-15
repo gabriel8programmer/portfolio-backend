@@ -2,7 +2,7 @@
 const form = document.querySelector("#contact-form")
 const spinner = document.querySelector("#spinner")
 
-const apiUrl = "http://localhost:3000/api"
+const apiUrl = "https://portfolio-backend-api-nine.vercel.app"
 
 const contact = async (e) => {
     // cancel default behavior
@@ -15,33 +15,26 @@ const contact = async (e) => {
     const email = formData.get("email")
     const message = formData.get("message")
 
-    try {
-        // show spinner
-        spinner.classList.remove("hidden")
+    // show spinner
+    spinner.classList.remove("hidden")
 
-        // send email
-        await fetch(`${apiUrl}/send-email`, {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ name, email, message })
-        })
+    // send email
+    await fetch(`${apiUrl}/api/send-email`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, message })
+    })
 
-        // clear all fields
-        e.target.reset()
+    // clear all fields
+    e.target.reset()
 
-        // set focus in first field
-        const firstInput = e.target.querySelector("input,textarea")
-        firstInput.focus()
+    // set focus in first field
+    const firstInput = e.target.querySelector("input,textarea")
+    firstInput.focus()
 
-    } catch (error) {
 
-        console.log("Algo deu errado!")
-
-    } finally {
-        // hide spinner
-        spinner.classList.add("hidden")
-    }
-
+    // hide spinner
+    spinner.classList.add("hidden")
 
 }
 
