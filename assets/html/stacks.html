@@ -20,6 +20,9 @@
     <!-- global styles -->
     <link rel="stylesheet" href="../css/styles.css" />
 
+    <!-- script -->
+    <script src="../js/stacks.js" defer></script>
+
     <!-- fontawesome -->
     <link
       rel="stylesheet"
@@ -33,7 +36,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
   <body
-    class="h-screen bg-[linear-gradient(to_bottom,_black,_rgba(0,0,0,0.5),_black),url('../img/bg-3.jpg')] bg-cover bg-center"
+    class="h-screen bg-[linear-gradient(to_bottom,_black,_rgba(0,0,0,0.5),_black),url('../img/bg-2.jpg')] bg-cover bg-center flex flex-col"
   >
     <header class="px-3 h-25 flex justify-between items-center">
       <div>
@@ -72,35 +75,135 @@
       </nav>
     </header>
 
-    <section class="my-5 px-3">
+    <section class="my-5 px-3 grow">
       <article class="max-w-3xl flex flex-col items-center gap-5 m-auto">
         <h1 class="text-3xl font-bold text-center">Minhas Stacks</h1>
         <p class="text-center text-sm">
           Veja As Stacks que Eu Mais Trabalho e Estudo. <br />Estou Me Aprimorando Mais a Cada Dia!
         </p>
 
-        <div class="h-20 flex items-center">
-          <button class="h-full w-35 uppercase font-bold border-b-5">Linguagens</button>
-          <button class="h-full w-35 uppercase font-bold text-white/50">Back-end</button>
-          <button class="h-full w-35 uppercase font-bold text-white/50">Versionamento</button>
+        <div class="h-20 flex items-center" id="control-stacks">
+          <button class="h-full w-35 uppercase font-bold cursor-pointer border-b-5">
+            Linguagens
+          </button>
+          <button class="h-full w-35 uppercase font-bold cursor-pointer text-white/50">
+            Back-end
+          </button>
+          <button class="h-full w-35 uppercase font-bold cursor-pointer text-white/50">
+            Versionamento
+          </button>
         </div>
 
-        <div class="max-w-sm">
+        <div class="max-w-sm" id="stack-groups">
           <!-- language list -->
           <ul class="flex gap-3 justify-center flex-wrap">
             <li>
-              <div class="w-20 h-22 bg-red-500 rounded-md"></div>
+              <div
+                class="w-20 h-22 bg-white/50 rounded-md grid place-items-center"
+                title="javascript"
+              >
+                <img height="32" width="32" src="https://cdn.simpleicons.org/javascript/black" />
+              </div>
             </li>
             <li>
-              <div class="w-20 h-22 bg-red-500 rounded-md"></div>
+              <div
+                class="w-20 h-22 bg-white/50 rounded-md grid place-items-center"
+                title="typescript"
+              >
+                <img height="32" width="32" src="https://cdn.simpleicons.org/typescript/black" />
+              </div>
             </li>
           </ul>
 
           <!-- back-end list -->
-          <ul class="flex gap-3 justify-center flex-wrap"></ul>
+          <ul class="flex gap-3 justify-center flex-wrap my-2 hidden">
+            <li>
+              <div class="w-20 h-22 bg-white/50 rounded-md grid place-items-center" title="node.js">
+                <img height="32" width="32" src="https://cdn.simpleicons.org/node.js/black" />
+              </div>
+            </li>
+            <li>
+              <div class="w-20 h-22 bg-white/50 rounded-md grid place-items-center" title="express">
+                <img height="32" width="32" src="https://cdn.simpleicons.org/express/black" />
+              </div>
+            </li>
+            <li>
+              <div class="w-20 h-22 bg-white/50 rounded-md grid place-items-center" title="fastify">
+                <img height="32" width="32" src="https://cdn.simpleicons.org/fastify/black" />
+              </div>
+            </li>
+            <li>
+              <div
+                class="w-20 h-22 bg-white/50 rounded-md grid place-items-center"
+                title="postgresql"
+              >
+                <img height="32" width="32" src="https://cdn.simpleicons.org/postgresql/black" />
+              </div>
+            </li>
+            <li>
+              <div class="w-20 h-22 bg-white/50 rounded-md grid place-items-center" title="mysql">
+                <img height="32" width="32" src="https://cdn.simpleicons.org/mysql/black" />
+              </div>
+            </li>
+            <li>
+              <div class="w-20 h-22 bg-white/50 rounded-md grid place-items-center" title="prisma">
+                <img height="32" width="32" src="https://cdn.simpleicons.org/prisma/black" />
+              </div>
+            </li>
+            <li>
+              <div
+                class="w-20 h-22 bg-white/50 rounded-md grid place-items-center"
+                title="sequelize"
+              >
+                <img height="32" width="32" src="https://cdn.simpleicons.org/sequelize/black" />
+              </div>
+            </li>
+            <li>
+              <div class="w-20 h-22 bg-white/50 rounded-md grid place-items-center" title="mongodb">
+                <img height="32" width="32" src="https://cdn.simpleicons.org/mongodb/black" />
+              </div>
+            </li>
+            <li>
+              <div
+                class="w-20 h-22 bg-white/50 rounded-md grid place-items-center"
+                title="mongoose"
+              >
+                <img height="32" width="32" src="https://cdn.simpleicons.org/mongoose/black" />
+              </div>
+            </li>
+            <li>
+              <div class="w-20 h-22 bg-white/50 rounded-md grid place-items-center" title="postman">
+                <img height="32" width="32" src="https://cdn.simpleicons.org/postman/black" />
+              </div>
+            </li>
+            <li>
+              <div
+                class="w-20 h-22 bg-white/50 rounded-md grid place-items-center"
+                title="insomnia"
+              >
+                <img height="32" width="32" src="https://cdn.simpleicons.org/insomnia/black" />
+              </div>
+            </li>
+            <li>
+              <div class="w-20 h-22 bg-white/50 rounded-md grid place-items-center" title="swagger">
+                <img height="32" width="32" src="https://cdn.simpleicons.org/swagger/black" />
+              </div>
+            </li>
+          </ul>
 
           <!-- version list -->
-          <ul class="flex gap-3 justify-center flex-wrap"></ul>
+          <ul class="flex gap-3 justify-center flex-wrap hidden">
+            <li>
+              <div class="w-20 h-22 bg-white/50 rounded-md grid place-items-center" title="git">
+                <img height="32" width="32" src="https://cdn.simpleicons.org/git/black" />
+              </div>
+            </li>
+            <li>
+              <div class="w-20 h-22 bg-white/50 rounded-md grid place-items-center" title="github">
+                <img height="32" width="32" src="https://cdn.simpleicons.org/github/black" />
+              </div>
+            </li>
+          </ul>
         </div>
       </article>
     </section>
