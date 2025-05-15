@@ -21,7 +21,7 @@ const disableAll = () => {
 const updateBackground = (i) => {
     body.setAttribute("class", "min-h-screen flex flex-col bg-cover bg-center")
 
-    body.classList.add(`bg-[linear-gradient(to_bottom,_black,_rgba(0,0,0,0.5),_black),url('../img/bg-${i + 2}.jpg')]`)
+    body.classList.add(`bg-[linear-gradient(to_bottom,_black,_rgba(0,0,0,0.5),_black),url('/img/bg-${i + 2}.jpg')]`)
 }
 
 const enableStackControl = (e, i) => {
