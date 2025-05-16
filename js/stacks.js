@@ -5,6 +5,12 @@ const btns = [...controlStacks.querySelectorAll("button")]
 const stackGroups = document.querySelector("#stack-groups")
 const groups = stackGroups.querySelectorAll("ul")
 
+const possibleBackgrounds = [
+    "bg-[linear-gradient(to_bottom,#3a506b,_rgba(0,0,0,0.5),#0b132b),url('/img/bg-1.jpg')]",
+    "bg-[linear-gradient(to_bottom,#2d6a4f,_rgba(0,0,0,0.5),#1b4332),url('/img/bg-2.jpg')]",
+    "bg-[linear-gradient(to_bottom,#3c096c,_rgba(0,0,0,0.5),#240046),url('/img/bg-3.jpg')]",
+]
+
 const disableAll = () => {
     btns.forEach(btn => {
         btn.classList.add("text-white/50")
@@ -20,8 +26,7 @@ const disableAll = () => {
 
 const updateBackground = (i) => {
     body.setAttribute("class", "min-h-screen flex flex-col bg-cover bg-center")
-
-    body.classList.add(`bg-[linear-gradient(to_bottom,_black,_rgba(0,0,0,0.5),_black),url('/img/bg-${i + 2}.jpg')]`)
+    body.classList.add(possibleBackgrounds[i])
 }
 
 const enableStackControl = (e, i) => {

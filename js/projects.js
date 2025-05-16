@@ -1,0 +1,36 @@
+
+const carousel = document.querySelector("#projects-carousel")
+const btnPrev = document.querySelector("#btn-prev")
+const btnNext = document.querySelector("#btn-next")
+
+// get card project size
+const cardStep = 3
+const scrollAmount = (carousel.querySelector("div").offsetWidth * cardStep) + 20
+
+const prev = () => {
+    carousel.scrollBy({ left: -scrollAmount, behavior: "smooth" })
+}
+
+const next = () => {
+    carousel.scrollBy({ left: scrollAmount, behavior: "smooth" })
+}
+
+const toggleVisibilityButtons = () => {
+    // hide buttons
+    btnPrev.classList.add("hidden")
+    btnNext.classList.add("hidden")
+
+    if (carousel.scrollLeft > 0) {
+        btnPrev.classList.remove("hidden")
+    }
+
+    if (carousel.scrollLeft + carousel.clientWidth < carousel.scrollWidth) {
+        btnNext.classList.remove("hidden")
+    }
+}
+
+btnPrev.addEventListener("click", prev)
+btnNext.addEventListener("click", next)
+
+carousel.addEventListener("scroll", toggleVisibilityButtons)
+

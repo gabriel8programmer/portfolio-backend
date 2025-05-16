@@ -20,6 +20,9 @@
     <!-- global styles -->
     <link rel="stylesheet" href="../css/styles.css" />
 
+    <!-- script -->
+    <script src="../js/projects.js" defer></script>
+
     <!-- fontawesome -->
     <link
       rel="stylesheet"
@@ -33,9 +36,9 @@
     <link rel="stylesheet" href="../css/tailwind-output.css" />
   </head>
   <body
-    class="min-h-screen flex flex-col bg-cover bg-center bg-[linear-gradient(to_bottom,_black,_rgba(0,0,0,0.5),_black),url('/img/bg-1.jpg')]"
+    class="min-h-screen flex flex-col bg-cover bg-center bg-[linear-gradient(to_bottom,#3a506b,_rgba(0,0,0,0.5),#0b132b),url('/img/bg-1.jpg')] snap-none"
   >
-    <header class="px-3 h-25 flex justify-between items-center">
+    <header class="px-3 h-20 flex justify-between items-center">
       <div>
         <a href="/">
           <img src="../img/logo.png" alt="Logo" />
@@ -72,7 +75,645 @@
       </nav>
     </header>
 
-    <section class="my-5 px-5 grow"></section>
+    <section class="my-10 px-5 grow">
+      <article class="flex flex-col gap-5 w-full relative">
+        <h1 class="text-3xl font-bold text-center">Meus Projetos</h1>
+
+        <div
+          class="flex gap-5 overflow-hidden snap-x snap-mandatory scroll-smooth"
+          id="projects-carousel"
+        >
+          <div class="min-w-80 bg-black/50 rounded-sm flex flex-col items-center gap-3 snap-center">
+            <h4 class="text-2xl text-center p-2">Nome do projeto</h4>
+
+            <img src="/img/image.png" alt="Imagem do projeto" />
+
+            <ul class="flex gap-2">
+              <li>
+                <div>
+                  <img height="24" width="24" src="https://cdn.simpleicons.org/typescript/white" />
+                </div>
+              </li>
+              <li>
+                <div>
+                  <img height="24" width="24" src="https://cdn.simpleicons.org/typescript/white" />
+                </div>
+              </li>
+              <li>
+                <div>
+                  <img height="24" width="24" src="https://cdn.simpleicons.org/typescript/white" />
+                </div>
+              </li>
+              <li>
+                <div>
+                  <img height="24" width="24" src="https://cdn.simpleicons.org/typescript/white" />
+                </div>
+              </li>
+            </ul>
+
+            <div class="flex flex-col gap-3 w-full items-center p-5">
+              <a
+                href="#"
+                class="bg-blue-500 text-center text-light flex justify-center items-center w-70 h-10 rounded-xl duration-500 hover:bg-blue-400 cursor-pointer"
+                >Deploy</a
+              >
+              <a
+                href="#"
+                class="bg-cyan-500 text-center text-light flex justify-center items-center w-70 h-10 rounded-xl duration-500 hover:bg-cyan-400 cursor-pointer"
+                >Repositório</a
+              >
+            </div>
+          </div>
+          <div class="min-w-80 bg-black/50 rounded-sm flex flex-col items-center gap-3 snap-center">
+            <h4 class="text-2xl text-center p-2">Nome do projeto</h4>
+
+            <img src="/img/image.png" alt="Imagem do projeto" />
+
+            <ul class="flex gap-2">
+              <li>
+                <div>
+                  <img height="24" width="24" src="https://cdn.simpleicons.org/typescript/white" />
+                </div>
+              </li>
+              <li>
+                <div>
+                  <img height="24" width="24" src="https://cdn.simpleicons.org/typescript/white" />
+                </div>
+              </li>
+              <li>
+                <div>
+                  <img height="24" width="24" src="https://cdn.simpleicons.org/typescript/white" />
+                </div>
+              </li>
+              <li>
+                <div>
+                  <img height="24" width="24" src="https://cdn.simpleicons.org/typescript/white" />
+                </div>
+              </li>
+            </ul>
+
+            <div class="flex flex-col gap-3 w-full items-center p-5">
+              <a
+                href="#"
+                class="bg-blue-500 text-center text-light flex justify-center items-center w-70 h-10 rounded-xl duration-500 hover:bg-blue-400 cursor-pointer"
+                >Deploy</a
+              >
+              <a
+                href="#"
+                class="bg-cyan-500 text-center text-light flex justify-center items-center w-70 h-10 rounded-xl duration-500 hover:bg-cyan-400 cursor-pointer"
+                >Repositório</a
+              >
+            </div>
+          </div>
+          <div class="min-w-80 bg-black/50 rounded-sm flex flex-col items-center gap-3 snap-center">
+            <h4 class="text-2xl text-center p-2">Nome do projeto</h4>
+
+            <img src="/img/image.png" alt="Imagem do projeto" />
+
+            <ul class="flex gap-2">
+              <li>
+                <div>
+                  <img height="24" width="24" src="https://cdn.simpleicons.org/typescript/white" />
+                </div>
+              </li>
+              <li>
+                <div>
+                  <img height="24" width="24" src="https://cdn.simpleicons.org/typescript/white" />
+                </div>
+              </li>
+              <li>
+                <div>
+                  <img height="24" width="24" src="https://cdn.simpleicons.org/typescript/white" />
+                </div>
+              </li>
+              <li>
+                <div>
+                  <img height="24" width="24" src="https://cdn.simpleicons.org/typescript/white" />
+                </div>
+              </li>
+            </ul>
+
+            <div class="flex flex-col gap-3 w-full items-center p-5">
+              <a
+                href="#"
+                class="bg-blue-500 text-center text-light flex justify-center items-center w-70 h-10 rounded-xl duration-500 hover:bg-blue-400 cursor-pointer"
+                >Deploy</a
+              >
+              <a
+                href="#"
+                class="bg-cyan-500 text-center text-light flex justify-center items-center w-70 h-10 rounded-xl duration-500 hover:bg-cyan-400 cursor-pointer"
+                >Repositório</a
+              >
+            </div>
+          </div>
+          <div class="min-w-80 bg-black/50 rounded-sm flex flex-col items-center gap-3 snap-center">
+            <h4 class="text-2xl text-center p-2">Nome do projeto</h4>
+
+            <img src="/img/image.png" alt="Imagem do projeto" />
+
+            <ul class="flex gap-2">
+              <li>
+                <div>
+                  <img height="24" width="24" src="https://cdn.simpleicons.org/typescript/white" />
+                </div>
+              </li>
+              <li>
+                <div>
+                  <img height="24" width="24" src="https://cdn.simpleicons.org/typescript/white" />
+                </div>
+              </li>
+              <li>
+                <div>
+                  <img height="24" width="24" src="https://cdn.simpleicons.org/typescript/white" />
+                </div>
+              </li>
+              <li>
+                <div>
+                  <img height="24" width="24" src="https://cdn.simpleicons.org/typescript/white" />
+                </div>
+              </li>
+            </ul>
+
+            <div class="flex flex-col gap-3 w-full items-center p-5">
+              <a
+                href="#"
+                class="bg-blue-500 text-center text-light flex justify-center items-center w-70 h-10 rounded-xl duration-500 hover:bg-blue-400 cursor-pointer"
+                >Deploy</a
+              >
+              <a
+                href="#"
+                class="bg-cyan-500 text-center text-light flex justify-center items-center w-70 h-10 rounded-xl duration-500 hover:bg-cyan-400 cursor-pointer"
+                >Repositório</a
+              >
+            </div>
+          </div>
+          <div class="min-w-80 bg-black/50 rounded-sm flex flex-col items-center gap-3 snap-center">
+            <h4 class="text-2xl text-center p-2">Nome do projeto</h4>
+
+            <img src="/img/image.png" alt="Imagem do projeto" />
+
+            <ul class="flex gap-2">
+              <li>
+                <div>
+                  <img height="24" width="24" src="https://cdn.simpleicons.org/typescript/white" />
+                </div>
+              </li>
+              <li>
+                <div>
+                  <img height="24" width="24" src="https://cdn.simpleicons.org/typescript/white" />
+                </div>
+              </li>
+              <li>
+                <div>
+                  <img height="24" width="24" src="https://cdn.simpleicons.org/typescript/white" />
+                </div>
+              </li>
+              <li>
+                <div>
+                  <img height="24" width="24" src="https://cdn.simpleicons.org/typescript/white" />
+                </div>
+              </li>
+            </ul>
+
+            <div class="flex flex-col gap-3 w-full items-center p-5">
+              <a
+                href="#"
+                class="bg-blue-500 text-center text-light flex justify-center items-center w-70 h-10 rounded-xl duration-500 hover:bg-blue-400 cursor-pointer"
+                >Deploy</a
+              >
+              <a
+                href="#"
+                class="bg-cyan-500 text-center text-light flex justify-center items-center w-70 h-10 rounded-xl duration-500 hover:bg-cyan-400 cursor-pointer"
+                >Repositório</a
+              >
+            </div>
+          </div>
+          <div class="min-w-80 bg-black/50 rounded-sm flex flex-col items-center gap-3 snap-center">
+            <h4 class="text-2xl text-center p-2">Nome do projeto</h4>
+
+            <img src="/img/image.png" alt="Imagem do projeto" />
+
+            <ul class="flex gap-2">
+              <li>
+                <div>
+                  <img height="24" width="24" src="https://cdn.simpleicons.org/typescript/white" />
+                </div>
+              </li>
+              <li>
+                <div>
+                  <img height="24" width="24" src="https://cdn.simpleicons.org/typescript/white" />
+                </div>
+              </li>
+              <li>
+                <div>
+                  <img height="24" width="24" src="https://cdn.simpleicons.org/typescript/white" />
+                </div>
+              </li>
+              <li>
+                <div>
+                  <img height="24" width="24" src="https://cdn.simpleicons.org/typescript/white" />
+                </div>
+              </li>
+            </ul>
+
+            <div class="flex flex-col gap-3 w-full items-center p-5">
+              <a
+                href="#"
+                class="bg-blue-500 text-center text-light flex justify-center items-center w-70 h-10 rounded-xl duration-500 hover:bg-blue-400 cursor-pointer"
+                >Deploy</a
+              >
+              <a
+                href="#"
+                class="bg-cyan-500 text-center text-light flex justify-center items-center w-70 h-10 rounded-xl duration-500 hover:bg-cyan-400 cursor-pointer"
+                >Repositório</a
+              >
+            </div>
+          </div>
+          <div class="min-w-80 bg-black/50 rounded-sm flex flex-col items-center gap-3 snap-center">
+            <h4 class="text-2xl text-center p-2">Nome do projeto</h4>
+
+            <img src="/img/image.png" alt="Imagem do projeto" />
+
+            <ul class="flex gap-2">
+              <li>
+                <div>
+                  <img height="24" width="24" src="https://cdn.simpleicons.org/typescript/white" />
+                </div>
+              </li>
+              <li>
+                <div>
+                  <img height="24" width="24" src="https://cdn.simpleicons.org/typescript/white" />
+                </div>
+              </li>
+              <li>
+                <div>
+                  <img height="24" width="24" src="https://cdn.simpleicons.org/typescript/white" />
+                </div>
+              </li>
+              <li>
+                <div>
+                  <img height="24" width="24" src="https://cdn.simpleicons.org/typescript/white" />
+                </div>
+              </li>
+            </ul>
+
+            <div class="flex flex-col gap-3 w-full items-center p-5">
+              <a
+                href="#"
+                class="bg-blue-500 text-center text-light flex justify-center items-center w-70 h-10 rounded-xl duration-500 hover:bg-blue-400 cursor-pointer"
+                >Deploy</a
+              >
+              <a
+                href="#"
+                class="bg-cyan-500 text-center text-light flex justify-center items-center w-70 h-10 rounded-xl duration-500 hover:bg-cyan-400 cursor-pointer"
+                >Repositório</a
+              >
+            </div>
+          </div>
+          <div class="min-w-80 bg-black/50 rounded-sm flex flex-col items-center gap-3 snap-center">
+            <h4 class="text-2xl text-center p-2">Nome do projeto</h4>
+
+            <img src="/img/image.png" alt="Imagem do projeto" />
+
+            <ul class="flex gap-2">
+              <li>
+                <div>
+                  <img height="24" width="24" src="https://cdn.simpleicons.org/typescript/white" />
+                </div>
+              </li>
+              <li>
+                <div>
+                  <img height="24" width="24" src="https://cdn.simpleicons.org/typescript/white" />
+                </div>
+              </li>
+              <li>
+                <div>
+                  <img height="24" width="24" src="https://cdn.simpleicons.org/typescript/white" />
+                </div>
+              </li>
+              <li>
+                <div>
+                  <img height="24" width="24" src="https://cdn.simpleicons.org/typescript/white" />
+                </div>
+              </li>
+            </ul>
+
+            <div class="flex flex-col gap-3 w-full items-center p-5">
+              <a
+                href="#"
+                class="bg-blue-500 text-center text-light flex justify-center items-center w-70 h-10 rounded-xl duration-500 hover:bg-blue-400 cursor-pointer"
+                >Deploy</a
+              >
+              <a
+                href="#"
+                class="bg-cyan-500 text-center text-light flex justify-center items-center w-70 h-10 rounded-xl duration-500 hover:bg-cyan-400 cursor-pointer"
+                >Repositório</a
+              >
+            </div>
+          </div>
+          <div class="min-w-80 bg-black/50 rounded-sm flex flex-col items-center gap-3 snap-center">
+            <h4 class="text-2xl text-center p-2">Nome do projeto</h4>
+
+            <img src="/img/image.png" alt="Imagem do projeto" />
+
+            <ul class="flex gap-2">
+              <li>
+                <div>
+                  <img height="24" width="24" src="https://cdn.simpleicons.org/typescript/white" />
+                </div>
+              </li>
+              <li>
+                <div>
+                  <img height="24" width="24" src="https://cdn.simpleicons.org/typescript/white" />
+                </div>
+              </li>
+              <li>
+                <div>
+                  <img height="24" width="24" src="https://cdn.simpleicons.org/typescript/white" />
+                </div>
+              </li>
+              <li>
+                <div>
+                  <img height="24" width="24" src="https://cdn.simpleicons.org/typescript/white" />
+                </div>
+              </li>
+            </ul>
+
+            <div class="flex flex-col gap-3 w-full items-center p-5">
+              <a
+                href="#"
+                class="bg-blue-500 text-center text-light flex justify-center items-center w-70 h-10 rounded-xl duration-500 hover:bg-blue-400 cursor-pointer"
+                >Deploy</a
+              >
+              <a
+                href="#"
+                class="bg-cyan-500 text-center text-light flex justify-center items-center w-70 h-10 rounded-xl duration-500 hover:bg-cyan-400 cursor-pointer"
+                >Repositório</a
+              >
+            </div>
+          </div>
+          <div class="min-w-80 bg-black/50 rounded-sm flex flex-col items-center gap-3 snap-center">
+            <h4 class="text-2xl text-center p-2">Nome do projeto</h4>
+
+            <img src="/img/image.png" alt="Imagem do projeto" />
+
+            <ul class="flex gap-2">
+              <li>
+                <div>
+                  <img height="24" width="24" src="https://cdn.simpleicons.org/typescript/white" />
+                </div>
+              </li>
+              <li>
+                <div>
+                  <img height="24" width="24" src="https://cdn.simpleicons.org/typescript/white" />
+                </div>
+              </li>
+              <li>
+                <div>
+                  <img height="24" width="24" src="https://cdn.simpleicons.org/typescript/white" />
+                </div>
+              </li>
+              <li>
+                <div>
+                  <img height="24" width="24" src="https://cdn.simpleicons.org/typescript/white" />
+                </div>
+              </li>
+            </ul>
+
+            <div class="flex flex-col gap-3 w-full items-center p-5">
+              <a
+                href="#"
+                class="bg-blue-500 text-center text-light flex justify-center items-center w-70 h-10 rounded-xl duration-500 hover:bg-blue-400 cursor-pointer"
+                >Deploy</a
+              >
+              <a
+                href="#"
+                class="bg-cyan-500 text-center text-light flex justify-center items-center w-70 h-10 rounded-xl duration-500 hover:bg-cyan-400 cursor-pointer"
+                >Repositório</a
+              >
+            </div>
+          </div>
+          <div class="min-w-80 bg-black/50 rounded-sm flex flex-col items-center gap-3 snap-center">
+            <h4 class="text-2xl text-center p-2">Nome do projeto</h4>
+
+            <img src="/img/image.png" alt="Imagem do projeto" />
+
+            <ul class="flex gap-2">
+              <li>
+                <div>
+                  <img height="24" width="24" src="https://cdn.simpleicons.org/typescript/white" />
+                </div>
+              </li>
+              <li>
+                <div>
+                  <img height="24" width="24" src="https://cdn.simpleicons.org/typescript/white" />
+                </div>
+              </li>
+              <li>
+                <div>
+                  <img height="24" width="24" src="https://cdn.simpleicons.org/typescript/white" />
+                </div>
+              </li>
+              <li>
+                <div>
+                  <img height="24" width="24" src="https://cdn.simpleicons.org/typescript/white" />
+                </div>
+              </li>
+            </ul>
+
+            <div class="flex flex-col gap-3 w-full items-center p-5">
+              <a
+                href="#"
+                class="bg-blue-500 text-center text-light flex justify-center items-center w-70 h-10 rounded-xl duration-500 hover:bg-blue-400 cursor-pointer"
+                >Deploy</a
+              >
+              <a
+                href="#"
+                class="bg-cyan-500 text-center text-light flex justify-center items-center w-70 h-10 rounded-xl duration-500 hover:bg-cyan-400 cursor-pointer"
+                >Repositório</a
+              >
+            </div>
+          </div>
+          <div class="min-w-80 bg-black/50 rounded-sm flex flex-col items-center gap-3 snap-center">
+            <h4 class="text-2xl text-center p-2">Nome do projeto</h4>
+
+            <img src="/img/image.png" alt="Imagem do projeto" />
+
+            <ul class="flex gap-2">
+              <li>
+                <div>
+                  <img height="24" width="24" src="https://cdn.simpleicons.org/typescript/white" />
+                </div>
+              </li>
+              <li>
+                <div>
+                  <img height="24" width="24" src="https://cdn.simpleicons.org/typescript/white" />
+                </div>
+              </li>
+              <li>
+                <div>
+                  <img height="24" width="24" src="https://cdn.simpleicons.org/typescript/white" />
+                </div>
+              </li>
+              <li>
+                <div>
+                  <img height="24" width="24" src="https://cdn.simpleicons.org/typescript/white" />
+                </div>
+              </li>
+            </ul>
+
+            <div class="flex flex-col gap-3 w-full items-center p-5">
+              <a
+                href="#"
+                class="bg-blue-500 text-center text-light flex justify-center items-center w-70 h-10 rounded-xl duration-500 hover:bg-blue-400 cursor-pointer"
+                >Deploy</a
+              >
+              <a
+                href="#"
+                class="bg-cyan-500 text-center text-light flex justify-center items-center w-70 h-10 rounded-xl duration-500 hover:bg-cyan-400 cursor-pointer"
+                >Repositório</a
+              >
+            </div>
+          </div>
+          <div class="min-w-80 bg-black/50 rounded-sm flex flex-col items-center gap-3 snap-center">
+            <h4 class="text-2xl text-center p-2">Nome do projeto</h4>
+
+            <img src="/img/image.png" alt="Imagem do projeto" />
+
+            <ul class="flex gap-2">
+              <li>
+                <div>
+                  <img height="24" width="24" src="https://cdn.simpleicons.org/typescript/white" />
+                </div>
+              </li>
+              <li>
+                <div>
+                  <img height="24" width="24" src="https://cdn.simpleicons.org/typescript/white" />
+                </div>
+              </li>
+              <li>
+                <div>
+                  <img height="24" width="24" src="https://cdn.simpleicons.org/typescript/white" />
+                </div>
+              </li>
+              <li>
+                <div>
+                  <img height="24" width="24" src="https://cdn.simpleicons.org/typescript/white" />
+                </div>
+              </li>
+            </ul>
+
+            <div class="flex flex-col gap-3 w-full items-center p-5">
+              <a
+                href="#"
+                class="bg-blue-500 text-center text-light flex justify-center items-center w-70 h-10 rounded-xl duration-500 hover:bg-blue-400 cursor-pointer"
+                >Deploy</a
+              >
+              <a
+                href="#"
+                class="bg-cyan-500 text-center text-light flex justify-center items-center w-70 h-10 rounded-xl duration-500 hover:bg-cyan-400 cursor-pointer"
+                >Repositório</a
+              >
+            </div>
+          </div>
+          <div class="min-w-80 bg-black/50 rounded-sm flex flex-col items-center gap-3 snap-center">
+            <h4 class="text-2xl text-center p-2">Nome do projeto</h4>
+
+            <img src="/img/image.png" alt="Imagem do projeto" />
+
+            <ul class="flex gap-2">
+              <li>
+                <div>
+                  <img height="24" width="24" src="https://cdn.simpleicons.org/typescript/white" />
+                </div>
+              </li>
+              <li>
+                <div>
+                  <img height="24" width="24" src="https://cdn.simpleicons.org/typescript/white" />
+                </div>
+              </li>
+              <li>
+                <div>
+                  <img height="24" width="24" src="https://cdn.simpleicons.org/typescript/white" />
+                </div>
+              </li>
+              <li>
+                <div>
+                  <img height="24" width="24" src="https://cdn.simpleicons.org/typescript/white" />
+                </div>
+              </li>
+            </ul>
+
+            <div class="flex flex-col gap-3 w-full items-center p-5">
+              <a
+                href="#"
+                class="bg-blue-500 text-center text-light flex justify-center items-center w-70 h-10 rounded-xl duration-500 hover:bg-blue-400 cursor-pointer"
+                >Deploy</a
+              >
+              <a
+                href="#"
+                class="bg-cyan-500 text-center text-light flex justify-center items-center w-70 h-10 rounded-xl duration-500 hover:bg-cyan-400 cursor-pointer"
+                >Repositório</a
+              >
+            </div>
+          </div>
+          <div class="min-w-80 bg-black/50 rounded-sm flex flex-col items-center gap-3 snap-center">
+            <h4 class="text-2xl text-center p-2">Nome do projeto</h4>
+
+            <img src="/img/image.png" alt="Imagem do projeto" />
+
+            <ul class="flex gap-2">
+              <li>
+                <div>
+                  <img height="24" width="24" src="https://cdn.simpleicons.org/typescript/white" />
+                </div>
+              </li>
+              <li>
+                <div>
+                  <img height="24" width="24" src="https://cdn.simpleicons.org/typescript/white" />
+                </div>
+              </li>
+              <li>
+                <div>
+                  <img height="24" width="24" src="https://cdn.simpleicons.org/typescript/white" />
+                </div>
+              </li>
+              <li>
+                <div>
+                  <img height="24" width="24" src="https://cdn.simpleicons.org/typescript/white" />
+                </div>
+              </li>
+            </ul>
+
+            <div class="flex flex-col gap-3 w-full items-center p-5">
+              <a
+                href="#"
+                class="bg-blue-500 text-center text-light flex justify-center items-center w-70 h-10 rounded-xl duration-500 hover:bg-blue-400 cursor-pointer"
+                >Deploy</a
+              >
+              <a
+                href="#"
+                class="bg-cyan-500 text-center text-light flex justify-center items-center w-70 h-10 rounded-xl duration-500 hover:bg-cyan-400 cursor-pointer"
+                >Repositório</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <button
+          class="w-20 h-20 bg-white/50 rounded-full text-3xl absolute top-1/2 transform -translate-y-1/2 cursor-pointer transition-500 hover:bg-white hover:text-black"
+          id="btn-prev"
+        >
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <button
+          class="w-20 h-20 bg-white/50 rounded-full text-3xl absolute right-0 top-1/2 transform -translate-y-1/2 cursor-pointer transition-500 hover:bg-white hover:text-black"
+          id="btn-next"
+        >
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+      </article>
+    </section>
 
     <footer class="h-20 flex items-center ps-3">
       <div class="h-full flex gap-3 self-start items-center">
