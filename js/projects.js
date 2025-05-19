@@ -31,6 +31,5 @@ const toggleVisibilityButtons = () => {
 
 btnPrev.addEventListener("click", prev)
 btnNext.addEventListener("click", next)
-
 carousel.addEventListener("scroll", toggleVisibilityButtons)
 
