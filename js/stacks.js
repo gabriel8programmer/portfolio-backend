@@ -18,7 +18,7 @@ const disableAll = () => {
 }
 
 const updateBackground = (i) => {
-    body.setAttribute("class", "min-h-screen flex flex-col bg-cover bg-center")
+    body.setAttribute("class", "min-h-screen text-white font-[Roboto] flex flex-col bg-cover bg-center")
     body.classList.add(possibleBackgrounds[i])
 }
 

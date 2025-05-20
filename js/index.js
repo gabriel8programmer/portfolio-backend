@@ -58,7 +58,6 @@ const updateHilightNavLinks = (activedIndex = 0) => {
     navLinks.map(link => link.classList.add(...hoverValue.split(" ")))
 }
 
-// load page for all pages
-addEventListener("load", () => {
+window.addEventListener("load", () => {
     updateHilightNavLinks()
 })
