@@ -36,7 +36,7 @@
   <body
     class="min-h-screen text-white font-[Roboto] flex flex-col bg-cover bg-center bg-[linear-gradient(to_bottom,#3a506b,_rgba(0,0,0,0.5),#0b132b),url('/img/bg-1.jpg')]"
   >
-    <header class="px-3 py-2 flex justify-between items-center lg:h-20">
+    <header class="px-3 py-2 flex justify-between items-center lg:h-20 z-1000">
       <div class="w-50 sm:w-70 md:w-auto">
         <a href="/">
           <img src="/img/logo.png" alt="Logo" />
@@ -89,15 +89,24 @@
           Veja As Stacks que Eu Mais Trabalho e Estudo. <br />Estou Me Aprimorando Mais a Cada Dia!
         </p>
 
-        <div class="h-20 flex items-center" id="control-stacks">
-          <button class="h-full w-35 uppercase font-bold cursor-pointer border-b-5">
-            Linguagens
+        <div class="w-[100%] sm:w-lg h-20 flex items-center" id="control-stacks">
+          <button class="h-full grow uppercase font-bold cursor-pointer border-b-5">
+            <span class="pointer-events-none w-full hidden sm:inline-block">Linguagens</span>
+            <span class="pointer-events-none text-3xl sm:hidden">
+              <i class="fa-brands fa-js"></i>
+            </span>
           </button>
-          <button class="h-full w-35 uppercase font-bold cursor-pointer text-white/50">
-            Back-end
+          <button class="h-full grow uppercase font-bold cursor-pointer text-white/50">
+            <span class="pointer-events-none w-full hidden sm:inline-block">Back-end</span>
+            <span class="pointer-events-none text-3xl sm:hidden">
+              <i class="fa-brands fa-node-js"></i>
+            </span>
           </button>
-          <button class="h-full w-35 uppercase font-bold cursor-pointer text-white/50">
-            Versionamento
+          <button class="h-full grow uppercase font-bold cursor-pointer text-white/50">
+            <span class="pointer-events-none w-full hidden sm:inline-block">Versionamento</span>
+            <span class="pointer-events-none text-3xl sm:hidden">
+              <i class="fa-brands fa-git-alt"></i>
+            </span>
           </button>
         </div>
 
@@ -123,7 +132,7 @@
           </ul>
 
           <!-- back-end list -->
-          <ul class="flex gap-3 justify-center flex-wrap my-2 hidden">
+          <ul class="flex gap-3 justify-center flex-wrap hidden">
             <li>
               <div class="w-20 h-22 bg-white/50 rounded-md grid place-items-center" title="node.js">
                 <img height="32" width="32" src="https://cdn.simpleicons.org/node.js/black" />
