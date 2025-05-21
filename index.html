@@ -35,40 +35,50 @@
   <body
     class="min-h-screen text-white font-[Roboto] flex flex-col bg-cover bg-center bg-[linear-gradient(to_bottom,#3a506b,_rgba(0,0,0,0.5),#0b132b),url('/img/bg-1.jpg')]"
   >
-    <header class="px-3 h-20 flex justify-between items-center">
-      <div>
+    <header class="px-3 py-2 flex justify-between items-center lg:h-20">
+      <div class="w-50 sm:w-70 md:w-auto">
         <a href="/">
           <img src="/img/logo.png" alt="Logo" />
         </a>
       </div>
 
-      <nav class="h-full w-xl flex">
+      <nav
+        class="w-screen h-screen fixed top-0 left-[100%] opacity-0 flex flex-col items-center justify-center bg-black/70 duration-500 transition-all ease-in-out lg:flex-row lg:w-xl lg:relative lg:left-0 lg:opacity-100 lg:h-full lg:bg-transparent lg:transition-none"
+      >
         <a
           href="/"
-          class="h-full grow flex justify-center items-center text-lg uppercase font-medium duration-500 border-b-5 text-white border-transparent hover:border-cyan-400 hover:text-cyan-400"
+          class="w-[90%] sm:w-[70%] md:w-[50%] lg:w-auto h-15 flex justify-center items-center text-lg uppercase font-medium duration-500 border-b-5 border-transparent lg:hover:border-cyan-400 lg:hover:text-cyan-400 lg:h-full lg:grow"
           >Home</a
         >
         <a
           href="/about.html"
-          class="h-full grow flex justify-center items-center text-lg uppercase font-medium duration-500 border-b-5 text-white border-transparent hover:border-cyan-400 hover:text-cyan-400"
+          class="w-[90%] sm:w-[70%] md:w-[50%] lg:w-auto h-15 flex justify-center items-center text-lg uppercase font-medium duration-500 border-b-5 border-transparent lg:hover:border-cyan-400 lg:hover:text-cyan-400 lg:h-full lg:grow"
           >Sobre mim</a
         >
         <a
           href="/stacks.html"
-          class="h-full grow flex justify-center items-center text-lg uppercase font-medium duration-500 border-b-5 text-white border-transparent hover:border-cyan-400 hover:text-cyan-400"
+          class="w-[90%] sm:w-[70%] md:w-[50%] lg:w-auto h-15 flex justify-center items-center text-lg uppercase font-medium duration-500 border-b-5 border-transparent lg:hover:border-cyan-400 lg:hover:text-cyan-400 lg:h-full lg:grow"
           >Minhas stacks</a
         >
         <a
           href="/projects.html"
-          class="h-full grow flex justify-center items-center text-lg uppercase font-medium duration-500 border-b-5 text-white border-transparent hover:border-cyan-400 hover:text-cyan-400"
+          class="w-[90%] sm:w-[70%] md:w-[50%] lg:w-auto h-15 flex justify-center items-center text-lg uppercase font-medium duration-500 border-b-5 border-transparent lg:hover:border-cyan-400 lg:hover:text-cyan-400 lg:h-full lg:grow"
           >Projetos</a
         >
         <a
           href="/contact.html"
-          class="h-full grow flex justify-center items-center text-lg uppercase font-medium duration-500 border-b-5 text-white border-transparent hover:border-cyan-400 hover:text-cyan-400"
+          class="w-[90%] sm:w-[70%] md:w-[50%] lg:w-auto h-15 flex justify-center items-center text-lg uppercase font-medium duration-500 border-b-5 border-transparent lg:hover:border-cyan-400 lg:hover:text-cyan-400 lg:h-full lg:grow"
           >Contato</a
         >
+
+        <button class="text-2xl lg:hidden absolute top-8 right-3" id="btn-close-navbar">
+          <i class="fa-solid fa-close"></i>
+        </button>
       </nav>
+
+      <button class="text-2xl lg:hidden" id="btn-open-navbar">
+        <i class="fa-solid fa-bars"></i>
+      </button>
     </header>
 
     <section class="my-10 px-5 grow flex justify-between items-center">
@@ -82,7 +92,7 @@
         </p>
 
         <a
-          href="/html/projects.html"
+          href="/projects.html"
           class="bg-blue-500 text-center text-light flex justify-center items-center w-50 h-10 rounded-xl duration-500 hover:bg-blue-400"
           >Ver Projetos</a
         >
@@ -93,8 +103,8 @@
       </figure>
     </section>
 
-    <footer class="h-20 flex items-center ps-3">
-      <div class="h-full flex gap-3 self-start items-center" id="social">
+    <footer class="py-5 flex flex-col items-center gap-3 ps-3 sm:h-20 sm:flex-row">
+      <div class="h-full flex gap-3 items-center md:self-start" id="social">
         <a
           href="https://github.com/gabriel8programmer"
           target="_blank"

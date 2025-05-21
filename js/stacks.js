@@ -22,11 +22,11 @@ const updateBackground = (i) => {
     body.classList.add(possibleBackgrounds[i])
 }
 
-const updateHilightSocialLinks = (index = 0) => {
+const updateHoverStylesInSocialLinks = (index = 0) => {
     const links = [...social.querySelectorAll("a")]
     links.map(link => link.setAttribute("class", "text-3xl duration-500"))
 
-    const hoverValue = possibleNavLinkHover[index].split(" ")[1]
+    const hoverValue = possibleNavLinkHoverStyle[index].split(" ")[1]
 
     // update social link hilight
     links.map(link => link.classList.add(hoverValue))
@@ -46,8 +46,8 @@ const enableStackControl = (e, i) => {
 
     // change background
     updateBackground(i)
-    updateHilightNavLinks(i)
-    updateHilightSocialLinks(i)
+    updateStyleNavLinks(i)
+    updateHoverStylesInSocialLinks(i)
 }
 
 btns.forEach((btn, i) => btn.addEventListener("click", (e) => enableStackControl(e, i)))
