@@ -4,8 +4,10 @@ const btnPrev = document.querySelector("#btn-prev")
 const btnNext = document.querySelector("#btn-next")
 
 // get card project size
-const cardStep = 3
-const scrollAmount = (carousel.querySelector("div").offsetWidth * cardStep) + 20
+const bodyWidth = body.clientWidth
+const firstCardWidth = carousel.querySelector("div").offsetWidth
+const cardStep = Math.floor(bodyWidth / firstCardWidth)
+const scrollAmount = (carousel.querySelector("div").offsetWidth * cardStep)
 
 const prev = () => {
     carousel.scrollBy({ left: -scrollAmount, behavior: "smooth" })
@@ -29,7 +31,7 @@ const toggleVisibilityButtons = () => {
     }
 }
 
+window.addEventListener("load", toggleVisibilityButtons)
+carousel.addEventListener("scroll", toggleVisibilityButtons)
 btnPrev.addEventListener("click", prev)
 btnNext.addEventListener("click", next)
-carousel.addEventListener("scroll", toggleVisibilityButtons)
-
