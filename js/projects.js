@@ -3,6 +3,11 @@ const carousel = document.querySelector("#projects-carousel")
 const btnPrev = document.querySelector("#btn-prev")
 const btnNext = document.querySelector("#btn-next")
 
+let bodyWidth = null
+let firstCardWidth = null
+let cardStep = null
+let scrollAmount = null
+
 const projects = [
     {
         title: "Todo-list-api",
@@ -30,7 +35,13 @@ const getListStacksTemplate = (stackSlugs = []) => {
 }
 
 function toggleOverlay(e) {
-    const el = e.target;
+    let el = null
+
+    if (e.target.tagName === "IMG") {
+        el = e.target.parentNode
+    } else {
+        el = e.target
+    }
 
     el.classList.toggle("bg-black/70")
     el.classList.toggle("fixed")
@@ -38,7 +49,7 @@ function toggleOverlay(e) {
     el.classList.toggle("h-screen")
     el.classList.toggle("top-0")
     el.classList.toggle("left-0")
-    el.classList.toggle("z-10000")
+    el.classList.toggle("z-9999999")
 }
 
 
@@ -50,8 +61,12 @@ const getTemplateProject = ({ title, img, stackSlugs, github, deploy }) => {
           >
             <h4 class="text-2xl text-center p-2">${title}</h4>
 
-            <div onClick="toggleOverlay(event)" class="transition-500 ease-in-out">
-                <img src="${img}" alt="Imagem do projeto (${title})" class="h-full object-contain" />
+            <div onClick="toggleOverlay(event)" class="flex  justify-center items-center cursor-pointer transition-all duration-500">
+                <img 
+                    src="${img}" 
+                    alt="Projeto (${title})" 
+                    class="w-full h-full object-contain max-h-150"
+                />
             </div>
             
             ${listStacks}
@@ -82,7 +97,7 @@ const next = () => {
 const populateCarousel = () => {
     projects.map(project => {
         const templateProject = getTemplateProject(project)
-        carousel.innerHTML = templateProject
+        carousel.innerHTML += templateProject
     })
 }
 
@@ -105,10 +120,10 @@ window.addEventListener("load", () => {
     populateCarousel()
 
     // get card project size
-    const bodyWidth = body.clientWidth
-    const firstCardWidth = carousel.querySelector("div").offsetWidth
-    const cardStep = Math.floor(bodyWidth / firstCardWidth)
-    const scrollAmount = (carousel.querySelector("div").offsetWidth * cardStep)
+    bodyWidth = body.clientWidth
+    firstCardWidth = carousel.querySelector("div").offsetWidth
+    cardStep = Math.floor(bodyWidth / firstCardWidth)
+    scrollAmount = (carousel.querySelector("div").offsetWidth * cardStep)
 
 
     // toggle visibility buttons
