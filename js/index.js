@@ -14,6 +14,7 @@ const possibleBackgrounds = [
     "bg-[linear-gradient(to_bottom,#3a506b,_rgba(0,0,0,0.5),#0b132b),url('/img/bg-1.jpg')]",
     "bg-[linear-gradient(to_bottom,#2d6a4f,_rgba(0,0,0,0.5),#1b4332),url('/img/bg-2.jpg')]",
     "bg-[linear-gradient(to_bottom,#3c096c,_rgba(0,0,0,0.5),#240046),url('/img/bg-3.jpg')]",
+    "bg-[linear-gradient(to_bottom,#621708,_rgba(0,0,0,0.5),#220901),url('/img/bg-4.jpg')]",
 ]
 
 const possiblePaths = [
@@ -27,13 +28,15 @@ const possiblePaths = [
 const possibleNavLinkTextStyle = [
     "text-cyan-400 border-cyan-400",
     "text-green-400 border-green-400",
-    "text-purple-400 border-purple-400"
+    "text-purple-400 border-purple-400",
+    "text-orange-400 border-orange-400"
 ]
 
 const possibleNavLinkHoverStyle = [
     "lg:hover:border-cyan-400 lg:hover:text-cyan-400",
     "lg:hover:border-green-400 lg:hover:text-green-400",
-    "lg:hover:border-purple-400 lg:hover:text-purple-400"
+    "lg:hover:border-purple-400 lg:hover:text-purple-400",
+    "lg:hover:border-orange-400 lg:hover:text-orange-400"
 ]
 
 const removeAnyTextStyleInNavLink = (index) => {
