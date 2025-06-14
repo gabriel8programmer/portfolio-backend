@@ -1,7 +1,6 @@
-
-const carousel = document.querySelector("#projects-carousel")
-const btnPrev = document.querySelector("#btn-prev")
-const btnNext = document.querySelector("#btn-next")
+const carousel = document.querySelector('#projects-carousel')
+const btnPrev = document.querySelector('#btn-prev')
+const btnNext = document.querySelector('#btn-next')
 
 let bodyWidth = null
 let firstCardWidth = null
@@ -9,54 +8,58 @@ let cardStep = null
 let scrollAmount = null
 
 const projects = [
-    {
-        title: "Todo-list-api",
-        img: "/img/projects/todo-list.png",
-        stackSlugs: ["nodedotjs", "typescript", "express", "mongodb", "mongoose", "swagger"],
-        github: "https://github.com/gabriel8programmer/todo-list-api",
-        deploy: "https://todo-list-api-yl9j.onrender.com/api/docs"
-    }
+  {
+    title: 'Todo-list-api',
+    img: '/img/projects/todo-list.png',
+    stackSlugs: ['nodedotjs', 'typescript', 'express', 'mongodb', 'mongoose', 'swagger', 'docker'],
+    github: 'https://github.com/gabriel8programmer/todo-list-api',
+    deploy: 'https://todo-list-api-yl9j.onrender.com/api/docs',
+  },
 ]
 
 const getListStacksTemplate = (stackSlugs = []) => {
-    let html = `<ul class="flex gap-3">`
+  let html = `<ul class="flex gap-3">`
 
-    const items = stackSlugs.map((slug) => `
+  const items = stackSlugs
+    .map(
+      slug => `
         <li>
             <div>
                 <img height="24" width="24" src="https://cdn.simpleicons.org/${slug}/white" />
             </div>
         </li>
-    `).toString().replace(/\,/g, "")
+    `,
+    )
+    .toString()
+    .replace(/\,/g, '')
 
-    html += items;
-    html += "</ul>"
-    return html
+  html += items
+  html += '</ul>'
+  return html
 }
 
 function toggleOverlay(e) {
-    let el = null
+  let el = null
 
-    if (e.target.tagName === "IMG") {
-        el = e.target.parentNode
-    } else {
-        el = e.target
-    }
+  if (e.target.tagName === 'IMG') {
+    el = e.target.parentNode
+  } else {
+    el = e.target
+  }
 
-    el.classList.toggle("bg-black/70")
-    el.classList.toggle("fixed")
-    el.classList.toggle("w-screen")
-    el.classList.toggle("h-screen")
-    el.classList.toggle("top-0")
-    el.classList.toggle("left-0")
-    el.classList.toggle("z-9999999")
+  el.classList.toggle('bg-black/70')
+  el.classList.toggle('fixed')
+  el.classList.toggle('w-screen')
+  el.classList.toggle('h-screen')
+  el.classList.toggle('top-0')
+  el.classList.toggle('left-0')
+  el.classList.toggle('z-9999999')
 }
 
-
 const getTemplateProject = ({ title, img, stackSlugs, github, deploy }) => {
-    const listStacks = getListStacksTemplate(stackSlugs)
+  const listStacks = getListStacksTemplate(stackSlugs)
 
-    return `<div
+  return `<div
             class="min-w-70 max-w-80 bg-black/50 rounded-sm flex flex-col items-center gap-3 snap-center"
           >
             <h4 class="text-2xl text-center p-2">${title}</h4>
@@ -87,49 +90,48 @@ const getTemplateProject = ({ title, img, stackSlugs, github, deploy }) => {
 }
 
 const prev = () => {
-    carousel.scrollBy({ left: -scrollAmount, behavior: "smooth" })
+  carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' })
 }
 
 const next = () => {
-    carousel.scrollBy({ left: scrollAmount, behavior: "smooth" })
+  carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' })
 }
 
 const populateCarousel = () => {
-    projects.map(project => {
-        const templateProject = getTemplateProject(project)
-        carousel.innerHTML += templateProject
-    })
+  projects.map(project => {
+    const templateProject = getTemplateProject(project)
+    carousel.innerHTML += templateProject
+  })
 }
 
 const toggleVisibilityButtons = () => {
-    // hide buttons
-    btnPrev.classList.add("hidden")
-    btnNext.classList.add("hidden")
+  // hide buttons
+  btnPrev.classList.add('hidden')
+  btnNext.classList.add('hidden')
 
-    if (carousel.scrollLeft > 0) {
-        btnPrev.classList.remove("hidden")
-    }
+  if (carousel.scrollLeft > 0) {
+    btnPrev.classList.remove('hidden')
+  }
 
-    if (carousel.scrollLeft + carousel.clientWidth < carousel.scrollWidth) {
-        btnNext.classList.remove("hidden")
-    }
+  if (carousel.scrollLeft + carousel.clientWidth < carousel.scrollWidth) {
+    btnNext.classList.remove('hidden')
+  }
 }
 
-window.addEventListener("load", () => {
-    // populate carousel
-    populateCarousel()
+window.addEventListener('load', () => {
+  // populate carousel
+  populateCarousel()
 
-    // get card project size
-    bodyWidth = body.clientWidth
-    firstCardWidth = carousel.querySelector("div").offsetWidth
-    cardStep = Math.floor(bodyWidth / firstCardWidth)
-    scrollAmount = (carousel.querySelector("div").offsetWidth * cardStep)
+  // get card project size
+  bodyWidth = body.clientWidth
+  firstCardWidth = carousel.querySelector('div').offsetWidth
+  cardStep = Math.floor(bodyWidth / firstCardWidth)
+  scrollAmount = carousel.querySelector('div').offsetWidth * cardStep
 
-
-    // toggle visibility buttons
-    toggleVisibilityButtons()
+  // toggle visibility buttons
+  toggleVisibilityButtons()
 })
 
-carousel.addEventListener("scroll", toggleVisibilityButtons)
-btnPrev.addEventListener("click", prev)
-btnNext.addEventListener("click", next)
+carousel.addEventListener('scroll', toggleVisibilityButtons)
+btnPrev.addEventListener('click', prev)
+btnNext.addEventListener('click', next)
