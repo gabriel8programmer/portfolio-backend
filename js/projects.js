@@ -11,9 +11,41 @@ const projects = [
   {
     title: 'Todo-list-api',
     img: '/img/projects/todo-list.png',
-    stackSlugs: ['nodedotjs', 'typescript', 'express', 'mongodb', 'mongoose', 'swagger', 'docker'],
+    stackSlugs: [
+      'nodedotjs',
+      'typescript',
+      'express',
+      'mongodb',
+      'mongoose',
+      'swagger',
+      'docker',
+      'jest',
+    ],
     github: 'https://github.com/gabriel8programmer/todo-list-api',
     deploy: 'https://todo-list-api-yl9j.onrender.com/api/docs',
+  },
+  {
+    title: 'Leads-api',
+    img: '/img/projects/leads-api.png',
+    stackSlugs: ['nodedotjs', 'typescript', 'express', 'postgresql', 'prisma', 'swagger', 'docker'],
+    github: 'https://github.com/gabriel8programmer/leads-api',
+    deploy: '',
+  },
+  {
+    title: 'Rentals-api',
+    img: '/img/projects/rentals-api.png',
+    stackSlugs: [
+      'nodedotjs',
+      'typescript',
+      'fastify',
+      'postgresql',
+      'prisma',
+      'swagger',
+      'docker',
+      'jest',
+    ],
+    github: 'https://github.com/gabriel8programmer/rentals-api',
+    deploy: '',
   },
 ]
 
@@ -76,8 +108,12 @@ const getTemplateProject = ({ title, img, stackSlugs, github, deploy }) => {
         
             <div class="flex flex-col gap-3 w-[99%] items-center p-5">
               <a
-                href="${deploy}" target="_blank"
-                class="bg-blue-500 text-center text-light flex justify-center items-center w-full h-10 rounded-xl duration-500 hover:bg-blue-400 cursor-pointer"
+                href="${deploy ? deploy : ''}" target="_blank"
+                class="text-center text-light flex justify-center items-center w-full h-10 rounded-xl duration-500 ${
+                  deploy !== ''
+                    ? 'bg-blue-500 hover:bg-blue-400 cursor-pointer'
+                    : 'bg-gray-500 pointer-events-none'
+                }"
                 >Deploy</a
               >
               <a
