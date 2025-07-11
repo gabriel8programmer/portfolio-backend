@@ -22,7 +22,7 @@ const projects = [
       'jest',
     ],
     github: 'https://github.com/gabriel8programmer/todo-list-api',
-    deploy: 'https://todo-list-api-yl9j.onrender.com/api/docs',
+    deploy: '',
   },
   {
     title: 'Leads-api',
